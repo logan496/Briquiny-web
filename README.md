@@ -2,7 +2,7 @@
 Site web du complexe scolaire Briquiny 
 
 
-#satck
+#stack
   - ReactJs
   - Sass
   - NodeJs
