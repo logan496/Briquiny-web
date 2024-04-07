@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #474954;
+  color: #fff;
+  padding: 0px 20px 0px 20px;
+  height: 100px;
+}
+@media screen and (max-width: 300px) {
+  .header {
+    font-size: 0.6em;
+  }
+}
+.header-p {
+  font-size: 1.3em;
+}
+.header_language {
+  outline: none;
+  border-radius: 10px;
+  background-color: #474954;
+  color: #fff;
+  border: none;
+  width: 50px;
+}/*# sourceMappingURL=index.css.map */

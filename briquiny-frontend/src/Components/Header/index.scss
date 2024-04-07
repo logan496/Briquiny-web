@@ -1,0 +1,31 @@
+$primary : #474954;
+$secondary : #F23000;
+$third: #76ED7B;
+$four: #628395;
+$five: #fff;
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $primary;
+    color: $five;
+    padding: 0px 20px 0px 20px;
+    height: 100px;
+    @media screen and (max-width: 300px) {
+     font-size: 0.6em;   
+    }
+
+    &-p{
+        font-size: 1.3em;
+    }
+    &_language{
+        outline: none;
+        border-radius: 10px;
+        background-color: $primary;
+        color: $five;
+        border: none;
+        width: 50px;
+    }
+}
