@@ -10,6 +10,7 @@ module.exports = (req, res, next) =>{
             userId: userId
         }
         next()
+        res.status(200).json({token})
     }catch (error){
         res.status(401).json({error})
     }

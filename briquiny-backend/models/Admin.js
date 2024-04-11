@@ -1,8 +1,8 @@
-const db = require('../utils/dbconnector')
 const bcrypt = require('bcrypt')
 
 class AdminModel{
-    static async authenticate(name, password){
+    static async authenticate(name, password, structure){
+        // await User.findOne({name: name, structure: structure})
         await User.findOne({name: name})
             .then(user =>{
                 if(!user){
@@ -15,6 +15,20 @@ class AdminModel{
                         }
                     })
                     return user
+
+            })
+    }
+    static async verifyAdmin(name){
+        await User.findOne({name: name})
+            .then(user =>{
+                if(user==="Briquiny-logbessou") {
+                    return 3
+                }else if(user==="Briquiny-kotto"){
+                    return 1
+                }else if(user==="GSB-briquiny"){
+                    return 2
+                }
+
             })
     }
 }

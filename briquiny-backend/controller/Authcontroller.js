@@ -5,10 +5,9 @@ const bcrypt = require('bcrypt')
 class AuthController{
 
     static async login(req, res){
-        const {name, password} = req.body
+        const {name, password, structure} = req.body
         const User = AdminModel.authenticate(name, password)
         if (User){
-
             res.status(200).json({
                 userId: User._id,
                 token: jwt.sign(
@@ -23,13 +22,6 @@ class AuthController{
             res.status(401).json({message: 'Email ou mot de passe incorect'})
         }
     }
-    static async logout(req, res){
-        return null
-    }
-
-
-
-
 }
 
 module.exports = AuthController

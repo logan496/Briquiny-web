@@ -7,8 +7,6 @@ app.use(express.static("public"))
 app.use(express.urlencoded({extended: true}))
 app.use('/briquiny', router)
 
-
-
 app.listen(3000, ()=>{
     console.log('Serveur démarré sur le port 3000')
 })
