@@ -23,7 +23,7 @@ function Footer() {
         </div>
       </div>
       <div className="footer_bottom">
-        copyright@2024 - briquinny | coded by <a href='/'>FTDcode</a>       
+        copyright@2024 - briquiny | coded by <a href='/'>FTDcode</a>       
       </div>
     </div>
   )
