@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 99vw;
+  height: 90vh;
+}
+.container_contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 80px;
+}
+.container_contact--h1 {
+  font-size: 4em;
+}
+.container_contact_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 100px;
+  align-items: center;
+  width: 100%;
+}
+.container_contact_div_div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 25%;
+  font-size: 1.5em;
+  border: 1px solid black;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 6px 6px 6px rgb(165, 163, 163);
+}
+.container_contact_div_div_div1--p {
+  font-weight: bold;
+}
+.container_contact_div_div_div2--p {
+  font-weight: bold;
+}
+.container_contact_div_div_div3--p {
+  font-weight: bold;
+}/*# sourceMappingURL=index.css.map */
