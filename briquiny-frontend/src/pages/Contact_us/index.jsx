@@ -22,7 +22,7 @@ function Contact_us(){
                             <p>Lorem ipsum dolor sit amet.</p>
                         </div>
                     </div>
-                    <img src={map} alt="location" />
+                    <img className="container_contact_div--img" src={map} alt="location" />
                 </div>
             </div>
         </div>

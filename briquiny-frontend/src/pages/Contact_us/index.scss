@@ -8,8 +8,8 @@ $five: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 99vw;
-    height: 90vh;
+    width: 100vw;
+    padding-top: 30px;
 
     &_contact{
         display: flex;
@@ -20,6 +20,16 @@ $five: #fff;
 
         &--h1{
             font-size: 4em;
+            @media screen and (max-width: 635px) {
+                font-size: 2.8em;
+                
+            }
+            @media screen and (max-width: 450px) {
+                font-size: 1.8em;
+            }
+            @media screen and (max-width: 280px) {
+                font-size: 1.3em;
+            }
         }
     
         &_div{
@@ -29,6 +39,20 @@ $five: #fff;
             gap: 100px;
             align-items: center;
             width: 100%;
+            @media screen and (max-width: 1138px) {
+                flex-direction: column;
+            }
+
+            &--img{
+                width: 40%;
+                @media screen and (max-width: 1138px) {
+                    width: 100%;
+                }
+                // @media screen and (max-width: 500px) {
+                //     height: 200%;
+                // }
+
+            }
 
             &_div{
                 display: flex;
@@ -40,6 +64,9 @@ $five: #fff;
                 padding: 40px;
                 border-radius: 20px;
                 box-shadow: 6px 6px 6px rgb(165, 163, 163);
+                @media screen and (max-width: 1138px) {
+                    width: 60%;
+                }
 
                 &_div1{
 

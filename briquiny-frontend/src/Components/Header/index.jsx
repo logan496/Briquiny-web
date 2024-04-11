@@ -1,16 +1,8 @@
-import { useEffect, useState } from "react";
 import "./index.css"
 
 function Header(){
 
-    //console.log(window.screen.width);
-    // const [isMobile, setIsMobile] = useState(false);
-    // function modifieHeader(){
 
-    // }
-    // useEffect(() =>{
-    //     console.log("Is ok !")
-    // }, [])
 
     return(
         <div className="header">
