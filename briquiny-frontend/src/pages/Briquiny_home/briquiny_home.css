@@ -1,5 +1,5 @@
 .home {
-  width: 100vw;
+  width: 100%;
 }
 
 .home_main_img {
@@ -87,6 +87,9 @@
   background-color: #F23000;
   font-size: 15px;
 }
+.home_first_content_wrapper .content_item .content_item_infos h2:nth-child(2) {
+  color: #628395;
+}
 .home_first_content_wrapper .content_item .content_item_infos p {
   width: 100%;
   text-align: justify;
@@ -160,6 +163,7 @@
   justify-content: center;
   font-size: 30px;
   text-align: center;
+  font-weight: bold;
 }
 @media screen and (max-width: 1200px) {
   .structures_item_container {
