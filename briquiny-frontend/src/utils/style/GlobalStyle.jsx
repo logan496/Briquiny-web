@@ -7,10 +7,6 @@ const StyledGlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         font-family: "Inter", sans-serif;
     }
-    *::-webkit-scrollbar{
-        width: 0px;
-        height: 0px;
-    }
 `
 
 function GlobalStyle(){
