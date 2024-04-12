@@ -22,7 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/briquiny_logbessou' element={ <Briquiny_logbessou /> } />
         <Route path='/college_briquiny' element={ <Briquinny_college /> } />
       </Routes>
-      {/* <Footer/> */}
+      <Footer/>
     </Router>
   </React.StrictMode>,
 )
