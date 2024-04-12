@@ -1,4 +1,7 @@
 import './briquiny_home.css'
+
+import { Link } from 'react-router-dom'
+
 function Home() {
   return (
     <div className="home">
@@ -21,15 +24,15 @@ function Home() {
         <div className="nos_structures">
           <h2>DECOUVREZ NOS STRUCTURES</h2>
           <div className="structures_item_container">
-            <a href="/">
+            <Link to={"/briquiny_kotto"}>
               <div className="structure_item">Briquiny Kotto</div>
-            </a>
-            <a href="/">
+            </Link>
+            <Link to={"/briquiny_logbessou"}>
               <div className="structure_item">Briquiny Logbessou</div>
-            </a>
-            <a href="/">
+            </Link>
+            <Link to={"/college_briquiny"}>
               <div className="structure_item">College briquiny</div>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

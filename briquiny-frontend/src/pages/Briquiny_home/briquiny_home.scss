@@ -52,7 +52,7 @@ $five: #fff;
   box-shadow: 4px 4px 10px 1px $secondary;
   @media screen and (max-width:1200px) {
     height: 400px;
-    width: 300px;
+    width: 500px;
   }
 }
 
@@ -82,9 +82,13 @@ $five: #fff;
         border-radius: 2em;
         background-color: $secondary;
         font-size: 15px;
+        
       }
       h2:nth-child(2){
         color: $four;
+        @media screen and (max-width:1200px) {
+          text-align: center;
+        }
       }
       p{
         width: 100%;

@@ -51,7 +51,7 @@
 @media screen and (max-width: 1200px) {
   .img_subs {
     height: 400px;
-    width: 300px;
+    width: 500px;
   }
 }
 
@@ -89,6 +89,11 @@
 }
 .home_first_content_wrapper .content_item .content_item_infos h2:nth-child(2) {
   color: #628395;
+}
+@media screen and (max-width: 1200px) {
+  .home_first_content_wrapper .content_item .content_item_infos h2:nth-child(2) {
+    text-align: center;
+  }
 }
 .home_first_content_wrapper .content_item .content_item_infos p {
   width: 100%;
