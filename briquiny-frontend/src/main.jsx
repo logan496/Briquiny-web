@@ -20,7 +20,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/briquiny_kotto' element={ <Briquiny_kotto /> } />
         <Route path='/briquiny_logbessou' element={ <Briquiny_logbessou /> } />
       </Routes>
-      <Footer/>
+      {/* <Footer/> */}
     </Router>
   </React.StrictMode>,
 )

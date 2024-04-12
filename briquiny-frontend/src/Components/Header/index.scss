@@ -13,6 +13,7 @@ $five: #fff;
     color: $five;
     padding: 0px 20px 0px 20px;
     height: 100px;
+    width: 100%;
     @media screen and (max-width: 300px) {
      font-size: 0.6em;   
     }
