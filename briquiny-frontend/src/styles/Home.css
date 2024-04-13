@@ -14,6 +14,10 @@
 }
 
 /* partie css du fichier concour */
+.date-concour{
+    margin: 10px;
+    padding: 10px;
+}
 .change-date{
     display: inline-block;
     background-color: #F23000;
@@ -69,6 +73,20 @@ td, th{
     padding: 20px;
     margin: auto;
 }
+
+/**/
+.resultats-container{
+    border-radius: 20px;
+    margin: 5px;
+}
+.resultats-container{
+    padding-top: 10px;
+}
+.resutats-form{
+    padding-top: 10px;
+}
+
+
 .App{
     display: flex;
     gap: 20px;

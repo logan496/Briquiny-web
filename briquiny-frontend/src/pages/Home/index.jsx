@@ -3,6 +3,7 @@ import Inscription from "../../composants/inscription.jsx";
 import Navbar from "../../composants/Navbar.jsx";
 import Scolarite from "../../composants/scolarite.jsx"
 import Transport from "../../composants/transport.jsx";
+import Resultats from "../../composants/resultats.jsx";
 function Home(){
 
     return(
@@ -17,6 +18,7 @@ function Home(){
                 <Inscription />
                 <Scolarite/>
                 <Transport/>
+                <Resultats/>
             </div>
         </div>
     )
