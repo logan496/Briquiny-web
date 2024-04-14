@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const router = require('./routes/router')
+require('./utils/dbconnector')
 
 app.use(express.json())
 app.use(express.static("public"))

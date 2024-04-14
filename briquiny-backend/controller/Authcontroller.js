@@ -1,9 +1,7 @@
 const jwt = require("jsonwebtoken")
-const bcrypt = require('bcrypt')
 const Auth = require('../middleware/Authentification')
 
 class AuthController{
-
     static async login(req, res){
         try {
             const {name, password} = req.body
