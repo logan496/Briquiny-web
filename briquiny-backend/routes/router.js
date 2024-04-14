@@ -3,7 +3,7 @@ const router = express.Router()
 
 //importations de modules nécessaires
 const AuthController = require('../controller/Authcontroller')
-const majController = require('../controller/Maj')
+
 const createUser = require('../middleware/createUser')
 const Update = require('../controller/Update')
 const AddController = require('../controller/Create')
@@ -14,7 +14,7 @@ router.post('/admin/login', AuthController.login)
 router.get('/admin/kotto', authenticate)
 router.get('/admin/logbessou', authenticate)
 router.get('/admin/GSB-briquiny', authenticate)
-router.get('/admin/date', majController.date_concour)
+
 router.post('/admin/user', createUser)
 
 //routes de modifications d'éléments

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 const {model} = require("mongoose");
 
-const frasiTransport = new mongoose.Schema({
+const fraisTransport = new mongoose.Schema({
     zones :{
         type: String,
         required: true,
@@ -13,6 +13,6 @@ const frasiTransport = new mongoose.Schema({
     }
 })
 
-const Transport = mongoose.model('Transport',frasiTransport)
+const Transport = mongoose.model('Transport',fraisTransport)
 
 module.exports = Transport

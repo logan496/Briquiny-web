@@ -1,7 +1,5 @@
-const Transport = require("../models/fraisTransport")
-const DateConcour = require("../models/DateConcour")
-import {AddCycle} from "../middleware/addCycle";
-import {AddZone} from "../middleware/AddZone";
+const {AddCycle} = require ("../middleware/addCycle")
+const {AddZone} = require("../middleware/AddZone")
 class Create{
     static async addByCylce(req, res){
         try{
