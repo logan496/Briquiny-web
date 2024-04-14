@@ -1,10 +1,11 @@
 const Transport = require('../models/fraisTransport')
 
-async function AddZone(zones, montants){
+async function AddZone(zone, montants){
     const transport = new Transport({
-        zone: zones,
+        zones: zone,
         montant: montants
     });
+    console.log(zone, montants)
     await transport.save()
 }
 

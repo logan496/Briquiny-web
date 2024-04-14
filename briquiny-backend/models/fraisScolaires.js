@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const {model} = require("mongoose");
 const schema = mongoose.Schema
 
 const fraisScolaires = new schema({
@@ -16,7 +17,7 @@ const fraisScolaires = new schema({
         required: true
     }
 })
+const Scolaire = model('Scolaire', fraisScolaires)
 
-
-module.exports = mongoose.model('frais', fraisScolaires)
+module.exports = Scolaire
 

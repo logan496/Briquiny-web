@@ -1,5 +1,6 @@
 const {AddCycle} = require ("../middleware/addCycle")
 const {AddZone} = require("../middleware/AddZone")
+const Transport = require("../models/fraisTransport")
 class Create{
     static async addByCylce(req, res){
         try{
@@ -14,8 +15,8 @@ class Create{
     }
     static async AddByZone(req, res){
         try{
-            const{zones, prix} = req.body
-            await AddZone(zones, prix)
+            const{zone, prix} = req.body
+            await AddZone(zone, prix)
                 .then(()=> res.status(201).json({message: 'Nouvelle zone enregistrée'}))
                 .catch(error => res.status(400).json({error}))
         }catch (error){

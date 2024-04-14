@@ -28,6 +28,6 @@ router.post('/admin/create/transport', AddController.AddByZone)
 router.post('/admin/create/cycle', AddController.addByCylce)
 
 //routes pour supprimer des éléments
-router.delete('/admin/delete/transport', DeleteController.DeleteByZones)
+router.delete('/admin/delete/zone', DeleteController.DeleteByZones)
 router.delete('/admin/delete/cycle', DeleteController.DeleteByCycle)
 module.exports = router;
