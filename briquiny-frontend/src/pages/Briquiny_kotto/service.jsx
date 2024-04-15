@@ -1,20 +1,20 @@
 import "./index.css";
 import PropTypes from "prop-types";
 
-function Service({img, lorem}){
+function Service({src, desc}){
     return(
         <div className="bloc_div2_div1_container">
             <div className="bloc_div2_div1_container_circle">
-                {img}
+                {src ? <img src={src} alt="" />: null}
             </div>
-            <p>{lorem}</p>
+            <p>{desc}</p>
         </div>
     )
 }
 
 Service.propTypes = {
-    img: PropTypes.string.isRequired,
-    lorem: PropTypes.string.isRequired,
+    src: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
 }
 
 export default Service;

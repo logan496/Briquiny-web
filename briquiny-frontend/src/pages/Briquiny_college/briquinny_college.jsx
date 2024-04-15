@@ -1,3 +1,5 @@
+import Service from '../Briquiny_kotto/service'
+
 function Briquinny_college() {
   return (
     <div className="bqn_college">
@@ -21,6 +23,11 @@ function Briquinny_college() {
         </div>
         <div className="clg_section3">
           <h2 className="clg_section_title">Service proposés</h2>
+          <div className="services_wrapper">
+            <Service desc={"lorem impsum massah ekie dolor pentium java"} />
+            <Service desc={"lorem impsum massah ekie dolor pentium java"} />
+            <Service desc={"lorem impsum massah ekie dolor pentium java"} />
+          </div>
         </div>
       </div>
     </div>
@@ -38,11 +45,11 @@ function StatItem ({ nbr, desc }) {
   )
 }
 
-function ServiceItem ({ src, desc }){
-  return(
-    <div className="service_item">
-      <img src={src} alt={desc} />
-      <p>{desc}</p>
-    </div>
-  )
-}
+// function ServiceItem ({ src, desc }){
+//   return(
+//     <div className="service_item">
+//       <img src={src} alt={desc} />
+//       <p>{desc}</p>
+//     </div>
+//   )
+// }
