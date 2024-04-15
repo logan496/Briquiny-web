@@ -15,6 +15,7 @@
   color: white;
   height: 70vh;
   width: 100%;
+  text-align: center;
 }
 .container_div2 {
   display: flex;
@@ -43,7 +44,7 @@
   color: white;
   padding: 10px 15px 10px 15px;
   border-radius: 10px;
-  box-shadow: 4px 4px 4px #474954;
+  transition: box-shadow 0.2s ease-in-out;
 }
 @media screen and (max-width: 800px) {
   .container_div2_div1_button {
@@ -54,6 +55,9 @@
     width: 100%;
     height: 50px;
   }
+}
+.container_div2_div1_button:hover {
+  box-shadow: 6px 6px 6px #cccccd;
 }
 .container_div2_div1_box {
   display: flex;
@@ -290,8 +294,8 @@
   color: white;
   padding: 10px 15px 10px 15px;
   border-radius: 10px;
-  box-shadow: 4px 4px 4px #474954;
   width: 200px;
+  transition: box-shadow 0.2s ease-in-out;
 }
 @media screen and (max-width: 900px) {
   .bloc_div1 {
@@ -299,6 +303,9 @@
     width: 70vw;
     margin-bottom: 30px;
   }
+}
+.bloc_div1:hover {
+  box-shadow: 6px 6px 6px #cccccd;
 }
 .bloc_div2 {
   display: flex;
@@ -381,10 +388,13 @@
   width: 300px;
   height: 160px;
   border-radius: 20px;
-  box-shadow: 4px 4px 4px #F23000;
+  transition: box-shadow 0.2s ease-in-out;
 }
 @media screen and (max-width: 900px) {
   .bloc_div3_box {
     width: 70vw;
   }
+}
+.bloc_div3_box:hover {
+  box-shadow: 8px 8px 8px #ea866d;
 }/*# sourceMappingURL=index.css.map */

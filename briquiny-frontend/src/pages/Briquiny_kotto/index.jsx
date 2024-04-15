@@ -1,13 +1,19 @@
 import "./index.css";
-import succes from "../../assets/success.svg";
+
 import { useEffect, useState } from "react";
+
+import Service from "./service";
+
+import succes from "../../assets/success.svg";
 
 function Briquiny_kotto(){
 
     // The state to manage the type of the display
     const [isMobile, setIsMobile] = useState(null);
     const [isMobile1, setIsMobile2] = useState(null);
-    
+
+    const lorem = "Lorem ipsum dolor sit amet";
+    const img = "circle";
     // The functions to define if the display is the mobile or not
     function changeDisplayType(){
         if (window.screen.width < 600 && !isMobile) {
@@ -137,34 +143,12 @@ function Briquiny_kotto(){
                     </div>
                     <div className="bloc_div2">
                         <div className="bloc_div2_div1">
-                            <div className="bloc_div2_div1_container">
-                                <div className="bloc_div2_div1_container_circle">
-                                    circle
-                                </div>
-                                <p>Lorem ipsum dolor sit amet </p>
-                            </div>
-                            <div className="bloc_div2_div1_container">
-                                <div className="bloc_div2_div1_container_circle">
-                                    circle
-                                </div>
-                                <p>Lorem ipsum dolor sit amet </p>
-                            </div>
-                            
+                            <Service img={img} lorem={lorem} />
+                            <Service img={img} lorem={lorem} />                        
                         </div>
                         <div className="bloc_div2_div2">
-                            <div className="bloc_div2_div1_container">
-                                <div className="bloc_div2_div1_container_circle">
-                                    circle
-                                </div>
-                                <p>Lorem ipsum dolor sit amet </p>
-                            </div>
-                            <div className="bloc_div2_div1_container">
-                                <div className="bloc_div2_div1_container_circle">
-                                    circle
-                                </div>
-                                <p>Lorem ipsum dolor sit amet </p>
-                            </div>
-                            
+                            <Service img={img} lorem={lorem} />
+                            <Service img={img} lorem={lorem} />
                         </div>
                     </div>
                     <div className="bloc_div3">
