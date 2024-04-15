@@ -3,7 +3,7 @@ const router = express.Router()
 
 //importations de modules nécessaires
 const AuthController = require('../controller/Authcontroller')
-
+const renderInformation = require('../controller/render')
 const createUser = require('../middleware/createUser')
 const Update = require('../controller/Update')
 const AddController = require('../controller/Create')
@@ -30,4 +30,8 @@ router.post('/admin/create/cycle', AddController.addByCylce)
 //routes pour supprimer des éléments
 router.delete('/admin/delete/zone', DeleteController.DeleteByZones)
 router.delete('/admin/delete/cycle', DeleteController.DeleteByCycle)
+
+//envoies des éléments au frontend
+router.post('/admin/send/zone', renderInformation.renderTransportInformations)
+router.post('/admin/send/cycle', renderInformation.renderScolariteInformation)
 module.exports = router;
