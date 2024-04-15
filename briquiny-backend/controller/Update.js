@@ -1,6 +1,7 @@
 const Transport = require("../models/fraisTransport")
 const Scolarite = require("../models/fraisScolaires")
 const DateConcour = require("../models/DateConcour")
+const Percent = require("../models/pourcentages")
 class Update{
     static async UpdateTransportPrice(req, res){
         const {zones, nouv_montant} = req.body
@@ -41,6 +42,13 @@ class Update{
     static async UpdateDate(req, res){
         const {date} = req.body
         await DateConcour.updateOne({Date: date}, {Date: date})
+            .then(()=> res.status(200).json({message: "Modification réussie"}))
+            .catch(error => res.status(400).json({error}))
+    }
+
+    static async UpdatePercent(req, res){
+        const {percent, exam} = req.body
+        await Percent.updateOne({exams: exam}, {pourcentage: percent})
             .then(()=> res.status(200).json({message: "Modification réussie"}))
             .catch(error => res.status(400).json({error}))
     }

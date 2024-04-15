@@ -10,12 +10,13 @@ const AddController = require('../controller/Create')
 const {authenticate} = require("../middleware/Authentification");
 const DeleteController = require('../controller/Delete')
 
-router.post('/admin/login', AuthController.login)
-router.get('/admin/kotto', authenticate)
-router.get('/admin/logbessou', authenticate)
-router.get('/admin/GSB-briquiny', authenticate)
-
+// router.post('/admin/login', AuthController.login)
+// router.get('/admin/kotto', authenticate)
+// router.get('/admin/logbessou', authenticate)
+// router.get('/admin/GSB-briquiny', authenticate)
 router.post('/admin/user', createUser)
+router.put('/admin/update/percent', Update.UpdatePercent)
+
 
 //routes de modifications d'éléments
 router.put('/admin/update/cycle', Update.UpdateCycle )
@@ -31,7 +32,9 @@ router.post('/admin/create/cycle', AddController.addByCylce)
 router.delete('/admin/delete/zone', DeleteController.DeleteByZones)
 router.delete('/admin/delete/cycle', DeleteController.DeleteByCycle)
 
+
 //envoies des éléments au frontend
 router.post('/admin/send/zone', renderInformation.renderTransportInformations)
 router.post('/admin/send/cycle', renderInformation.renderScolariteInformation)
+router.post('/admin/send/percent', renderInformation.renderSuccessPercent)
 module.exports = router;
