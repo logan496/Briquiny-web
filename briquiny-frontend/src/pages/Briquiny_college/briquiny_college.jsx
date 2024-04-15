@@ -1,6 +1,6 @@
 import Service from '../Briquiny_kotto/service'
 
-function Briquinny_college() {
+function Briquiny_college() {
   return (
     <div className="bqn_college">
       <div className="bqn_colllege_head">
@@ -34,7 +34,7 @@ function Briquinny_college() {
   )
 }
 
-export default Briquinny_college
+export default Briquiny_college
 
 function StatItem ({ nbr, desc }) {
   return (
