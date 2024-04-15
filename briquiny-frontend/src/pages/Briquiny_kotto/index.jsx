@@ -143,12 +143,12 @@ function Briquiny_kotto(){
                     </div>
                     <div className="bloc_div2">
                         <div className="bloc_div2_div1">
-                            <Service img={img} lorem={lorem} />
-                            <Service img={img} lorem={lorem} />                        
+                            <Service src={img} desc={lorem} />
+                            <Service src={img} desc={lorem} />                        
                         </div>
                         <div className="bloc_div2_div2">
-                            <Service img={img} lorem={lorem} />
-                            <Service img={img} lorem={lorem} />
+                            <Service src={img} desc={lorem} />
+                            <Service src={img} desc={lorem} />
                         </div>
                     </div>
                     <div className="bloc_div3">
