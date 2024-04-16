@@ -18,6 +18,14 @@ $five: #fff;
      font-size: 0.6em;   
     }
 
+    &_right{
+
+        &_link{
+            text-decoration: none;
+            color: white;
+        }
+    }
+
     &-p{
         font-size: 1.3em;
     }

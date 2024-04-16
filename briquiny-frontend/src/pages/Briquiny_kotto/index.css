@@ -38,6 +38,7 @@
 }
 .container_div2_div1--p {
   text-align: center;
+  text-align: justify;
 }
 .container_div2_div1_button {
   background-color: #F23000;
@@ -130,7 +131,7 @@
   justify-content: space-between;
   align-items: center;
   border: 1px solid black;
-  height: 50vh;
+  height: 45vh;
   width: 2px;
 }
 
