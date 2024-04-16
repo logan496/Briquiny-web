@@ -1,1 +1,253 @@
-/*# sourceMappingURL=briquiny_college.css.map */
+.bqn_college {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 10vh;
+}
+
+.bqn_colllege_head {
+  height: 60vh;
+  width: 100%;
+  background-color: #628395;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.bqn_colllege_head h1 {
+  font-size: 45px;
+}
+
+.content_wrapper {
+  padding: 2vh 4vw;
+  margin-top: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 10vh;
+}
+.content_wrapper .clg_section1 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2vh;
+  align-items: start;
+}
+.content_wrapper .clg_section1 h3 {
+  background-color: #F23000;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 25px;
+  border-radius: 1em;
+  color: white;
+}
+.content_wrapper .clg_section1 .nbrs_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 5vw;
+       column-gap: 5vw;
+  width: 100%;
+}
+.content_wrapper .clg_section1 .nbrs_wrapper .stat_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2vh;
+}
+.content_wrapper .clg_section1 .nbrs_wrapper .stat_item h1 {
+  color: #628395;
+}
+.content_wrapper .clg_section1 .section1_text_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2vh;
+}
+.content_wrapper .clg_section1 .section1_text_container p {
+  width: 50%;
+  text-align: justify;
+}
+.content_wrapper .clg_section2 {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+.content_wrapper .clg_section2 .succes_container {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 25px;
+  background-color: #76ED7B;
+  border-radius: 100%;
+  position: relative;
+  position: absolute;
+  z-index: 2;
+}
+.content_wrapper .clg_section2 button {
+  position: absolute;
+  background-color: #76ED7B;
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+  border: none;
+  z-index: 2;
+}
+.content_wrapper .clg_section2 button:hover {
+  cursor: pointer;
+}
+.content_wrapper .clg_section2 button:nth-child(5) {
+  top: 50px;
+  left: 35%;
+}
+.content_wrapper .clg_section2 button:nth-child(6) {
+  top: 50px;
+  right: 35%;
+}
+.content_wrapper .clg_section2 button:nth-child(7) {
+  bottom: -50px;
+  left: 50%;
+}
+.content_wrapper .clg_section2 .liaison {
+  height: 2px;
+  background-color: #474954;
+  position: absolute;
+}
+.content_wrapper .clg_section2 .liaison:nth-child(1) {
+  width: 10vw;
+  top: 110px;
+  left: 35.5%;
+  rotate: 30deg;
+}
+.content_wrapper .clg_section2 .liaison:nth-child(2) {
+  width: 10vw;
+  top: 110px;
+  right: 35%;
+  rotate: -30deg;
+}
+.content_wrapper .clg_section2 .liaison:nth-child(3) {
+  width: 7vw;
+  bottom: 50px;
+  left: 47.8%;
+  rotate: -100deg;
+}
+
+.clg_section3 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5vh;
+  align-items: start;
+  margin-top: 10vh;
+}
+.clg_section3 h3 {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 25px;
+  border-radius: 20px;
+  background-color: #F23000;
+  color: #fff;
+}
+.clg_section3 .services_wrapper {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 2vw;
+       column-gap: 2vw;
+  align-items: center;
+  justify-content: center;
+}
+.clg_section3 .services_wrapper .service_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2vh;
+}
+.clg_section3 .services_wrapper .service_item p {
+  width: 50%;
+  text-align: center;
+  color: #628395;
+  font-weight: bold;
+}
+
+.service_item_subst {
+  height: 80px;
+  width: 80px;
+  background-color: #628395;
+  border-radius: 100%;
+}
+
+.obstructor_wrapper {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.obstructor_wrapper .obstructor {
+  position: relative;
+  height: 300px;
+  width: 500px;
+  border-radius: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2vw;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  box-shadow: 0px 0px 5px 0.1px #fff;
+}
+.obstructor_wrapper .obstructor button {
+  position: absolute;
+  top: 25px;
+  right: 1vw;
+  padding: 10px 15px;
+  background-color: #fff;
+  border: none;
+  border-radius: 2em;
+}
+.obstructor_wrapper .obstructor .results_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 5vw;
+       column-gap: 5vw;
+  width: 100%;
+}
+
+.results_container .result_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2vh;
+  font-weight: bold;
+}
+.results_container .result_item p:first-child {
+  background-color: #76ED7B;
+  height: 70px;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+.results_container .result_item p:last-child {
+  color: white;
+}/*# sourceMappingURL=briquiny_college.css.map */
