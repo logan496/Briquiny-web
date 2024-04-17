@@ -10,7 +10,7 @@ const AddController = require('../controller/Create')
 const {authenticate} = require("../middleware/Authentification");
 const DeleteController = require('../controller/Delete')
 
-// router.post('/admin/login', AuthController.login)
+router.post('/admin/login', AuthController.login)
 // router.get('/admin/kotto', authenticate)
 // router.get('/admin/logbessou', authenticate)
 // router.get('/admin/GSB-briquiny', authenticate)

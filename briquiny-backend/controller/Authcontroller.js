@@ -8,12 +8,12 @@ class AuthController{
             const User = await Auth.authenticate(name, password)
             if (User) {
                 const token = jwt.sign(
-                    {userId: User._id},
+                    {userId: User.name},
                     "secretkey",
                     {expiresIn: "1h"}
                 )
                 res.status(200).json({
-                    userId: User._id,
+                    userId: User.name,
                     token: token
                 })
             } else {
