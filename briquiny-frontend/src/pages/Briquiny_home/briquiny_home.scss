@@ -148,8 +148,7 @@ $five: #fff;
       height: 280px;
       width: 280px;
       padding: 20px;
-      border: 1px solid black;
-      box-shadow: 4px 4px 4px 2px gainsboro;
+      border: 1px solid gainsboro;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -157,6 +156,11 @@ $five: #fff;
       font-size: 30px;
       text-align: center;
       font-weight: bold;
+      transition: 0.4s;
+      &:hover{
+        border: none;
+        box-shadow: 4px 4px 4px 2px gainsboro;
+      }
     }//structure_item
   }
   @media screen and (max-width: 1200px) {
