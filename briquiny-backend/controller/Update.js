@@ -2,6 +2,8 @@ const Transport = require("../models/fraisTransport")
 const Scolarite = require("../models/fraisScolaires")
 const DateConcour = require("../models/DateConcour")
 const Percent = require("../models/pourcentages")
+
+
 class Update{
     static async UpdateTransportPrice(req, res){
         const {zones, nouv_montant} = req.body
@@ -40,8 +42,8 @@ class Update{
     }
 
     static async UpdateDate(req, res){
-        const {date} = req.body
-        await DateConcour.updateOne({Date: date}, {Date: date})
+        const {Ets,date} = req.body
+        await DateConcour.updateOne({ets: Ets}, {Date: date})
             .then(()=> res.status(200).json({message: "Modification réussie"}))
             .catch(error => res.status(400).json({error}))
     }
@@ -53,6 +55,9 @@ class Update{
             .catch(error => res.status(400).json({error}))
     }
 
+    // static async UpdateFile(req, res){
+    //     const {file} = req.body
+    // }
 }
 
 

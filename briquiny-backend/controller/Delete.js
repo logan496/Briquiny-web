@@ -8,7 +8,6 @@ class Delete{
             .then(() => res.status(200).json({message: "Suppression réussie"}))
             .catch(error => res.status(400).json({error}))
     }
-
     static async DeleteByCycle(req, res){
         const {cycle} = req.body
         await Scolarite.deleteOne({cycles: cycle})

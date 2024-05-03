@@ -4,8 +4,8 @@ const Transport = require("../models/fraisTransport")
 class Create{
     static async addByCylce(req, res){
         try{
-            const {cycles, prix, prixInscription} =  req.body
-            await AddCycle(cycles, prix,prixInscription)
+            const {cycles, prix, prixInscription, etablissement} =  req.body
+            await AddCycle(cycles, prix,prixInscription, etablissement)
                 .then(()=> res.status(201).json({message: 'cycle enregistré'}))
                 .catch(error => res.status(400).json({error}))
         }catch (error){

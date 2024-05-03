@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const {model} = require('mongoose')
 
 const DateConcour = new mongoose.Schema({
-    id:{
+    ets:{
         type: String,
         required: true
     },

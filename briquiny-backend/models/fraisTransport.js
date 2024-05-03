@@ -2,6 +2,11 @@ const mongoose = require("mongoose")
 const {model} = require("mongoose");
 
 const fraisTransport = new mongoose.Schema({
+    ets:{
+        type: String,
+        required: true,
+        unique: true
+    },
     zones :{
         type: String,
         required: true,

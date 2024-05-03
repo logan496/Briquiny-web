@@ -3,6 +3,11 @@ const {model} = require("mongoose");
 const schema = mongoose.Schema
 
 const fraisScolaires = new schema({
+    ets:{
+        type: String,
+        required: true,
+        unique: true
+    },
     cycle:{
         type: String,
         required: true,
