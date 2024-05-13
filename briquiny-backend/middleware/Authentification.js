@@ -1,7 +1,7 @@
 const User = require('../models/User')
 const bcrypt = require('bcrypt')
 
- async function authenticate(name, password){
+async function authenticate(name, password){
     try{
         const user = await User.findOne({name})
         const passwordMatch =  await bcrypt.compare(password, user.password)

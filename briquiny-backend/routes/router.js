@@ -8,9 +8,9 @@ const createUser = require('../middleware/createUser')
 const Update = require('../controller/Update')
 const AddController = require('../controller/Create')
 const DeleteController = require('../controller/Delete')
-const req = require("express/lib/request");
-// const file = require('../middleware/file')
-// const multer = require('multer')
+const multer = require('multer')
+const PDF =  require('../models/PDF')
+
 
 router.post('/admin/login', AuthController.login)
 router.post('/admin/user', createUser)
@@ -41,5 +41,21 @@ router.post('/admin/send/zone', renderInformation.renderTransportInformations)
 router.post('/admin/send/cycle', renderInformation.renderScolariteInformation)
 router.post('/admin/send/percent', renderInformation.renderSuccessPercent)
 
+const storage = multer.memoryStorage()
+const upload = multer({storage: storage})
 
+router.put('/admin/file', upload.single('pdfFile'), (req, res) =>{
+    if(!req.file){
+        return res.status(400).json({message: "aucun fichier pdf détecter"})
+    }
+
+    const newPDF = new PDF({
+        nom: req.file.originalname,
+        fichier: req.file.buffer
+    })
+
+    newPDF.save()
+        .then(() => res.status(200).json({message: "opération réussie"}))
+        .catch(err => res.status(500).json({err, message: "erreur opération échouée"}))
+})
 module.exports = router;

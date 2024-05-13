@@ -2,6 +2,7 @@ const Transport = require("../models/fraisTransport")
 const Scolarite = require("../models/fraisScolaires")
 const DateConcour = require("../models/DateConcour")
 const Percent = require("../models/pourcentages")
+const upPDF = require("../middleware/UpdatePDF")
 
 
 class Update{
@@ -55,9 +56,12 @@ class Update{
             .catch(error => res.status(400).json({error}))
     }
 
-    // static async UpdateFile(req, res){
-    //     const {file} = req.body
-    // }
+    static async UpdatePDF(req, res){
+        const {path, name} = req.file
+        await upPDF.upPDF(name, path)
+            .then(() => res.status(200).json({message: "Fichier enregistré"}))
+            .catch(error => res.status(400).json({error}))
+    }
 }
 
 
