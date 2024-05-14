@@ -14,7 +14,7 @@ function Navbar() {
         setIsClicked(!isClicked);
         setIsNavbarVisible(!isNavbarVisible);
     };
-
+    
     return (
         <>
             <nav className={`navbar ${isNavbarVisible ? "visible" : ""}`}>
@@ -22,23 +22,23 @@ function Navbar() {
                     <h1 className="logo">BRIQUINY</h1>
                     <ul>
                         <li>
-                            <NavLink to="/" className="nav-link">
+                            <NavLink to="/briquiny-kotto" className="nav-link">
                                 Briquiny-Kotto
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/" className="nav-link">
+                            <NavLink to="/briquiny-logbessou" className="nav-link">
                                 Briquiny-Logbessou
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/" className="nav-link">
+                            <NavLink to="/GSB-briquiny" className="nav-link">
                                 GSB-Briquiny
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to="/logout" className="nav-link">
-                                <button className="logout">Logout</button>
+                                <button className="logout" >Logout</button>
                             </NavLink>
                         </li>
                         <select className="lang">
@@ -56,9 +56,11 @@ function Navbar() {
                     className="nav-toggle-close"
                     src={isClicked ? svgClicked : svgNotClicked}
                 />
+
             </div>
         </>
     );
+
 }
 
 export default Navbar;

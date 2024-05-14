@@ -5,8 +5,8 @@ function resultats(){
             <form className="resutats-form" method="post">
                 {/* eslint-disable-next-line react/no-unescaped-entities */}
                 <label>NOM DE L'EXAMEN</label> :
-                <input type="text" name="result-year" placeholder="Annee" className="resultats-container"/>
-                <input type="text" name="result-percent" placeholder="Pourcentage" className="resultats-container"/>
+                <input type="text" name="result-year" placeholder="Annee" className="resultats__container"/>
+                <input type="text" name="result-percent" placeholder="Pourcentage" className="resultats__container"/>
                 <input type="submit" name="submit-result" value="METTRE A JOUR" className="change-date"/>
             </form>
 
