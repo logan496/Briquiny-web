@@ -8,7 +8,7 @@ async function authenticate(name, password){
         if(user && passwordMatch){
             return user
         }else {
-            return 1
+            return null
         }
     }catch (error){
         throw error

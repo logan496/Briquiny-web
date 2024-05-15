@@ -6,7 +6,6 @@ const fraisScolaires = new schema({
     ets:{
         type: String,
         required: true,
-        unique: true
     },
     cycle:{
         type: String,

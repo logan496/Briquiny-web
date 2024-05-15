@@ -4,7 +4,8 @@ const {model} = require('mongoose')
 const DateConcour = new mongoose.Schema({
     ets:{
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     date: {
         type: Date,

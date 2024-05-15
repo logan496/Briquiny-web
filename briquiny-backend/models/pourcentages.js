@@ -4,10 +4,11 @@ const {model} = require('mongoose')
 const Pourcentages = new mongooose.Schema({
     exams: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     pourcentage: {
-        type: String,
+        type: Number,
         required: true
     }
 })

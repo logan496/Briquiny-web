@@ -15,15 +15,14 @@ const PDF =  require('../models/PDF')
 router.post('/admin/login', AuthController.login)
 router.post('/admin/user', createUser)
 
-
 //routes de modifications d'éléments
 router.put('/admin/update/percent', Update.UpdatePercent)
-router.put('/admin/update/cycle', Update.UpdateCycle )
+// router.put('/admin/update/cycle', Update.UpdateCycle )
 router.put('/admin/update/cycle/price', Update.UpdatePrice)
 router.put('/admin/update/date', Update.UpdateDate)
-router.put('/admin/update/cylce/price_inscription', Update.UpdatePriceInscription)
+router.put('/admin/update/cycle/price_inscription', Update.UpdatePriceInscription)
 router.put('/admin/update/transport/price', Update.UpdateTransportPrice)
-router.put('/admin/update/transport/zone', Update.UpdateZones)
+// router.put('/admin/update/transport/zone', Update.UpdateZones)
 
 
 
@@ -41,6 +40,8 @@ router.post('/admin/send/zone', renderInformation.renderTransportInformations)
 router.post('/admin/send/cycle', renderInformation.renderScolariteInformation)
 router.post('/admin/send/percent', renderInformation.renderSuccessPercent)
 
+
+//gestion du remplaçement des ficheirs dans la BD
 const storage = multer.memoryStorage()
 const upload = multer({storage: storage})
 
