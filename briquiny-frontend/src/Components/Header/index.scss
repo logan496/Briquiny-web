@@ -24,6 +24,13 @@ $five: #fff;
      font-size: 0.6em;   
     }
 
+    &-h1{
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 2em;
+    }
+
     &_right{
         display: flex;
         justify-content: center;

@@ -8,7 +8,7 @@ function Header(){
 
     return(
         <div className="header">
-            <h1 className="header-h1">BRIQUINY</h1>
+            <NavLink to={"/"} className="header-h1">BRIQUINY</NavLink>
             <div className="header_right">
                 <NavLink to={"contact_us"} className="header_right_link">Contactez nous</NavLink>
                 <NavLink to={"/briquiny_kotto"} className="header_right_link">Briquiny Kotto</NavLink>
