@@ -1,9 +1,16 @@
 import './briquiny_college.css'
 import success_icon from '../../assets/success.svg'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 function Briquiny_college() {
-  const [ isObsOpen, setIsObsOpen ] =  useState(false)
+  const [ isOverlayOpen, setIsOverlayOpen ] =  useState(false)
+  const mainBubbleRef = useRef(null)
+  const bubble1Ref = useRef(null) 
+  const bubble2Ref = useRef(null) 
+  const bubble3Ref = useRef(null) 
+  const line1Ref = useRef(null) 
+  const line2Ref = useRef(null) 
+  const line3Ref = useRef(null) 
 
   const resArr = [
     {
@@ -23,10 +30,42 @@ function Briquiny_college() {
     },
   ]
 
+  const svgAttributesSetter = (svgLine, firstBlock, secondBlock)=>{
+    if (firstBlock && svgLine) {
+      const x1 = secondBlock.offsetLeft + secondBlock.offsetWidth / 2;
+      const y1 = secondBlock.offsetTop + secondBlock.offsetHeight / 2;
+      const x2 = firstBlock.offsetLeft + firstBlock.offsetWidth / 2;
+      const y2 = firstBlock.offsetTop + firstBlock.offsetHeight / 2;
+
+      svgLine.setAttribute("x1", x1);
+      svgLine.setAttribute("y1", y1);
+      svgLine.setAttribute("x2", x2);
+      svgLine.setAttribute("y2", y2);
+    }
+  }
+
+  useEffect(()=>{
+    const mainBubbleElem = mainBubbleRef.current
+    const bubble1Elem = bubble1Ref.current
+    const bubble2Elem = bubble2Ref.current
+    const bubble3Elem = bubble3Ref.current
+    const line1Elem = line1Ref.current
+    const line2Elem = line2Ref.current
+    const line3Elem = line3Ref.current
+
+
+    svgAttributesSetter(line1Elem, mainBubbleElem, bubble1Elem)
+    svgAttributesSetter(line2Elem, mainBubbleElem, bubble2Elem)
+    svgAttributesSetter(line3Elem, mainBubbleElem, bubble3Elem)
+
+    
+
+  },[])
+
   return (
     <div className="bqn_college">
       {
-        isObsOpen ? <Obstructor results={resArr} setter={setIsObsOpen}/> : null
+        isOverlayOpen ? <Obstructor results={resArr} setter={setIsOverlayOpen}/> : null
       }
       <div className="bqn_colllege_head">
         <h1>Collège Briquiny</h1>
@@ -47,15 +86,15 @@ function Briquiny_college() {
         </div>
         <div className="clg_section2">
           {/* pour l'affichage des stats du collèges */}
-          <div className="liaison"></div>
-          <div className="liaison"></div>
-          <div className="liaison"></div>
-          <div className="succes_container">
+          <svg width="100"><line stroke='black' ref={line1Ref}/></svg>
+          <svg width="100"><line stroke='black' ref={line2Ref}/></svg>
+          <svg width="100"><line stroke='black' ref={line3Ref}/></svg>
+          <div ref={mainBubbleRef} className="succes_container">
             <img src={success_icon} alt="success_icon" />
           </div>
-          <button onClick={()=>setIsObsOpen(true)}>Bacc</button>
-          <button onClick={()=>setIsObsOpen(true)}>Probatoire</button>
-          <button onClick={()=>setIsObsOpen(true)}>BEPC</button>
+          <button ref={bubble1Ref} onClick={()=>setIsOverlayOpen(true)}>Bacc</button>
+          <button ref={bubble2Ref} onClick={()=>setIsOverlayOpen(true)}>Probatoire</button>
+          <button ref={bubble3Ref} onClick={()=>setIsOverlayOpen(true)}>BEPC</button>
         </div>
         <div className="clg_section3">
           <h3 className="clg_section_title">Service proposés</h3>
@@ -76,7 +115,7 @@ function Obstructor ({results, setter}) {
   return(
     <div className="obstructor_wrapper">
       <div className="obstructor">
-        <button onClick={()=>setter(false)}>sortir</button>
+        <button onClick={()=>setter(false)}>ok</button>
         <div className="results_container">
           {
             results.map((item)=>{

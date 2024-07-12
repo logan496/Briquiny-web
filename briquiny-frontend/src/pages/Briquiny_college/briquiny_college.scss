@@ -10,7 +10,7 @@ $five: #fff;
 }
 
 .bqn_colllege_head{
-  height: 60vh;
+  height: 75vh;
   width: 100%;
   background-color: $four;
   display: flex;
@@ -19,6 +19,9 @@ $five: #fff;
   justify-content: center;
   h1{
     font-size: 45px;
+    @media screen and (max-width:1200px) {
+      text-align: center;
+    }
   }
 }
 
@@ -37,11 +40,11 @@ $five: #fff;
     row-gap: 2vh;
     align-items: start;
     h3{
-      background-color: #F23000;
+      background-color: $secondary;
       height: fit-content;
       width: fit-content;
       padding: 10px 25px;
-      border-radius: 1em;
+      border-radius: 15px;
       color: white;
     }// section 1 h2
     .nbrs_wrapper{
@@ -59,8 +62,15 @@ $five: #fff;
         row-gap: 2vh;
         h1{
           color: $four;
+          @media screen and (max-width:1200px) {
+            font-size: 28px;
+          }
         }
       }// stat_item
+      @media screen and (max-width:1200px) {
+        flex-direction: column;
+        row-gap: 0.5vh;
+      }
     }//nbrs_wrapper
     .section1_text_container{
       width: 100%;
@@ -71,76 +81,92 @@ $five: #fff;
       p{
         width: 50%;
         text-align: justify;
+        @media screen and (max-width:1200px) {
+          width: 85%;
+        }
       }
+    }
+    @media screen and (max-width:1200px) {
+      align-items: center;
     }
   }//clg section 1
 
   .clg_section2{
     width: 100%;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 50vh;
     .succes_container{
       height: fit-content;
       width: fit-content;
+      position: absolute;
+      top: 35%;
+      right: 45%;
       padding: 25px;
       background-color: $third;
-      border-radius: 100%;
-      position: relative;
       position: absolute;
+      border-radius: 100%;
       z-index: 2;
+      @media screen and (min-width:1650px) {
+        right: 42%;
+      }
+      @media screen and (max-height:600px) {
+        position: static;
+      }
+      @media screen and (max-width:1200px) {
+        position: static;
+      }
     }// succes_container
     button{
       position: absolute;
       background-color: $third;
-      height: 70px;
-      width: 70px;
+      height: 90px;
+      width: 90px;
       border-radius: 100%;
       border: none;
       z-index: 2;
       &:hover{
         cursor: pointer;
       }
+      @media screen and (max-height:600px) {
+        position: static;
+      }
+      @media screen and (max-width:1200px) {
+        position: static;
+      }
     }// button
     button:nth-child(5){
-      top: 50px;
-      left: 35%;
+      top: 25%;
+      left: 30%;
     }
     button:nth-child(6){
-      top: 50px;
+      top: 25%;
       right: 35%;
     }
     button:nth-child(7){
-      bottom: -50px;
-      left: 50%;
+      bottom: -15%;
+      left: 45%;
     }
-
-    .liaison{
-      height: 2px;
-      background-color: $primary;
-      position: absolute;
+    @media screen and (max-height:600px) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      column-gap: 1vw;
+      svg{
+        display: none;
+      }
     }
-    .liaison:nth-child(1){
-      width: 10vw;
-      top: 110px;
-      left: 35.5%;
-      rotate: 30deg;
+    @media screen and (max-width:1200px) {
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 1vw;
+      svg{
+        display: none;
+      }
     }
-    .liaison:nth-child(2){
-      width: 10vw;
-      top: 110px;
-      right: 35%;
-      rotate: -30deg;
-    }
-    .liaison:nth-child(3){
-      width: 7vw;
-      bottom: 50px;
-      left: 47.8%;
-      rotate: -100deg;
-    }
-
   }// clg section 2
 }
 
@@ -153,21 +179,30 @@ $five: #fff;
   h3{
     width: fit-content;
     padding: 10px 25px;
-    border-radius: 20px;
+    border-radius: 15px;
     background-color: $secondary;
     color: $five;
   }
   .services_wrapper{
     display: flex;
     flex-direction: row;
-    column-gap: 2vw;
+    column-gap: 1vw;
     align-items: center;
     justify-content: center;
     .service_item{
+      height: fit-content;
+      width: fit-content;
+      padding: 15px 15px;
       display: flex;
       flex-direction: column;
       align-items: center;
       row-gap: 2vh;
+      transition: 0.2s;
+      &:hover{
+        border-radius: 1em;
+        cursor: pointer;
+        box-shadow: 0px 0px 5px 1px rgba($color: $secondary, $alpha: 0.4);
+      }
       p{
         width: 50%;
         text-align: center;
@@ -175,12 +210,19 @@ $five: #fff;
         font-weight: bold;
       }
     }//Service_item
+    @media screen and (max-width:1200px) {
+      flex-direction: column;
+      row-gap: 1vh;
+    }
   }//service_wrapper
+  @media screen and (max-width:1200px) {
+    align-items: center;
+  }
 }//clg_section3
 
 .service_item_subst{
-  height: 80px;
-  width: 80px;
+  height: 150px;
+  width: 150px;
   background-color: #628395;
   border-radius: 100%;
 }
