@@ -25,7 +25,7 @@ function GSBBriquiny(){
                 <Documents/>
                 <Resultats/>
                 <Scolarite scaleValue={"col"}/>
-                <Transport/>
+                <Transport scaleValue={"col"}/>
             </div>
         </div>
     )
