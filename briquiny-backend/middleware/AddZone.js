@@ -6,7 +6,6 @@ async function AddZone(zone, montants, etablissement){
         montant: montants,
         ets: etablissement
     });
-    console.log(zone, montants)
     await transport.save()
 }
 

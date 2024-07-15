@@ -7,6 +7,10 @@ const Pourcentages = new mongooose.Schema({
         required: true,
         unique: true
     },
+    year: {
+        type: Number,
+        required: true
+    },
     pourcentage: {
         type: Number,
         required: true

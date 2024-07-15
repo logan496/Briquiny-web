@@ -6,7 +6,7 @@ class Create{
         try{
             const {cycles, prix, prixInscription, etablissement} =  req.body
             await AddCycle(cycles, prix,prixInscription, etablissement)
-                .then(()=> res.status(201).json({message: 'cycle enregistré'}))
+                .then(()=> res.status(200).json({message: 'cycle enregistré'}))
                 .catch(error => res.status(400).json({error}))
         }catch (error){
             res.status(500).json({error})
@@ -15,9 +15,9 @@ class Create{
     }
     static async AddByZone(req, res){
         try{
-            const{zone, prix} = req.body
-            await AddZone(zone, prix)
-                .then(()=> res.status(201).json({message: 'Nouvelle zone enregistrée'}))
+            const{etablissement ,zone, montants} = req.body
+            await AddZone(zone, montants, etablissement)
+                .then(()=> res.status(200).json({message: 'Nouvelle zone enregistrée'}))
                 .catch(error => res.status(400).json({error}))
         }catch (error){
             res.status(500).json({error})

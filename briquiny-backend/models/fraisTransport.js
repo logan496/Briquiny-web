@@ -5,7 +5,6 @@ const fraisTransport = new mongoose.Schema({
     ets:{
         type: String,
         required: true,
-        unique: true
     },
     zones :{
         type: String,
