@@ -21,22 +21,52 @@ class Update{
             })
     }
 
-    static async UpdatePrice(req, res){
-        const{cycles, nouv_montant} = req.body
-        console.log(req.body)
-        await Scolarite.findOneAndUpdate(
-            {cycle: cycles},
-            {montant: nouv_montant},
-            {new:true}
+
+    static async UpdatePriceTranche(req, res){
+        const{cycles, nouv_tranche, nbr_tranche} = req.body
+        if(nbr_tranche === 1){
+            await Scolarite.findOneAndUpdate(
+                {cycle: cycles},
+                {tranche1: nouv_tranche},
+                {new: true}
+            )
+                .then(update => {
+                    if (update) res.status(200).json({message: "Modification de prix réussie"})
+                    else res.status(200).json({message: "Echec de la mise à jour"})
+                })
+                .catch(error =>{
+                    res.status(500).json({message: "internal error", error})
+                    console.log(error)
+                } )
+        }else if(nbr_tranche === 2){
+            await Scolarite.findOneAndUpdate(
+                {cycle: cycles},
+                {tranche2: nouv_tranche},
+                {new: true}
+            )
+                .then(update => {
+                    if (update) res.status(200).json({message: "Modification de prix réussie"})
+                    else res.status(200).json({message: "Echec de la mise à jour"})
+                })
+                .catch(error =>{
+                    res.status(500).json({message: "internal error", error})
+                    console.log(error)
+                } )
+        }else(
+            await Scolarite.findOneAndUpdate(
+                {cycle: cycles},
+                {tranche3: nouv_tranche},
+                {new: true}
+            )
+                .then(update => {
+                    if (update) res.status(200).json({message: "Modification de prix réussie"})
+                    else res.status(200).json({message: "Echec de la mise à jour"})
+                })
+                .catch(error =>{
+                    res.status(500).json({message: "internal error", error})
+                    console.log(error)
+                } )
         )
-            .then(updated => {
-                if (updated) res.status(200).json({message: "modification réussie"})
-                else res.status(400).json({message: "echec de la modification"})
-            })
-            .catch(error => {
-                res.status(500).json({message: "internal error"})
-                console.log(error)
-            })
     }
 
     static async UpdatePriceInscription(req,res){

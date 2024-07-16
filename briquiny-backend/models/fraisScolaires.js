@@ -12,11 +12,19 @@ const fraisScolaires = new schema({
         required: true,
         unique: true
     },
-    montant:{
+    montantInscription: {
         type: Number,
         required: true
     },
-    montantInscription: {
+    tranche1:{
+        type: Number,
+        required: true
+    },
+    tranche2:{
+        type: Number,
+        required: true
+    },
+    tranche3:{
         type: Number,
         required: true
     }

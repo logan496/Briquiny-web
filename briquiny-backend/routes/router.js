@@ -18,7 +18,7 @@ router.post('/admin/user', createUser)
 //routes de modifications d'éléments
 router.put('/admin/update/percent', Update.UpdatePercent)
 router.put('/admin/update/year_exams', Update.UpdateYearDate)
-router.put('/admin/update/cycle/price', Update.UpdatePrice)
+router.put('/admin/update/cycle/price', Update.UpdatePriceTranche)
 router.put('/admin/update/date', Update.UpdateDate)
 router.put('/admin/update/cycle/price_inscription', Update.UpdatePriceInscription)
 router.put('/admin/update/transport/price', Update.UpdateTransportPrice)
