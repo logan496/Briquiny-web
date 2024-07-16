@@ -22,7 +22,7 @@ const fraisScolaires = new schema({
     },
     tranche3:{
         type: Number,
-        required: true
+        required: false
     }
 })
 const Scolaire = model('Scolaire', fraisScolaires)
