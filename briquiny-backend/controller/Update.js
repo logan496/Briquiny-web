@@ -112,7 +112,7 @@ class Update{
             {new: true}
         )
             .then(update => {
-                if (updated) res.status(200).json({message: "modification réussie"})
+                if (update) res.status(200).json({message: "modification réussie"})
                 else res.status(400).json({message: "échec de la modification"})
             })
             .catch(error => {
