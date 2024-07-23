@@ -22,24 +22,39 @@ class Render{
         }
     }
 
+    // static async renderScolariteInformation(req, res){
+    //     const{etablissement} = req.body
+    //     if (etablissement === "col"){
+    //         Scolaire.find({ets: etablissement})
+    //             .then(scolaire => res.status(200).json(scolaire))
+    //             .catch(error => res.status(400).json({error}))
+    //     }
+    //     else if(etablissement === "kotto"){
+    //         Scolaire.find({ets: etablissement})
+    //             .then(scolaire => res.status(200).json(scolaire))
+    //             .catch(error => res.status(400).json({error}))
+    //     }
+    //     else if(etablissement === 'log'){
+    //         Scolaire.find({ets: etablissement})
+    //             .then(scolaire => res.status(200).json(scolaire))
+    //             .catch(error => res.status(400).json({error}))
+    //     }
+    // }
+
     static async renderScolariteInformation(req, res){
-        const{etablissement} = req.body
-        if (etablissement === "col"){
-            Scolaire.find({ets: etablissement})
-                .then(scolaire => res.status(200).json(scolaire))
-                .catch(error => res.status(400).json({error}))
-        }
-        else if(etablissement === "kotto"){
-            Scolaire.find({ets: etablissement})
-                .then(scolaire => res.status(200).json(scolaire))
-                .catch(error => res.status(400).json({error}))
-        }
-        else if(etablissement === 'log'){
-            Scolaire.find({ets: etablissement})
-                .then(scolaire => res.status(200).json(scolaire))
-                .catch(error => res.status(400).json({error}))
-        }
+        const{cycles} = req.body
+        Scolaire.find({cycle: cycles})
+            .then(scolaire => res.status(200).json(scolaire))
+            .catch(error => res.status(400).json({error}))
     }
+
+    // static async renderScolariteInformation(req, res){
+    //     const{Ets} = req.body
+    //     Scolaire.find({ets: Ets})
+    //         .then(scolaire => res.status(200).json(scolaire))
+    //         .catch(error => res.status(400).json({error}))
+    // }
+
 
     static async renderSuccessPercent(req, res){
         Percent.find()

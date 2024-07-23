@@ -4,14 +4,17 @@ const {model} = require("mongoose");
 const fraisTransport = new mongoose.Schema({
     ets:{
         type: String,
-        required: true,
+        required: true
     },
-    zones :{
-        type: String,
-        required: true,
-        unique: true
+    trim1:{
+        type: Number,
+        required: true
     },
-    montant: {
+    trim2:{
+        type: Number,
+        required: true
+    },
+    trim3:{
         type: Number,
         required: true
     }

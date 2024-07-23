@@ -27,7 +27,7 @@ router.put('/admin/update/transport/price', Update.UpdateTransportPrice)
 
 //routes pour créer de nouveaux éléments
 router.post('/admin/create/transport', AddController.AddByZone)
-router.post('/admin/create/cycle', AddController.addByCylce)
+router.post('/admin/create/cycle', AddController.AddByCylce)
 
 //routes pour supprimer des éléments
 router.delete('/admin/delete/zone', DeleteController.DeleteByZones)

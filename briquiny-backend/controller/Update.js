@@ -5,20 +5,50 @@ const Percent = require("../models/pourcentages")
 
 class Update{
     static async UpdateTransportPrice(req, res){
-        const {zone, nouv_montant} = req.body
-        await Transport.findOneAndUpdate(
-            {zones: zone},
-            {montant: nouv_montant},
-            {new: true}
-        )
-            .then(updated => {
-                if (updated) res.status(200).json({message: "modification réussie"})
-                else res.status(400).json({message: "echec de la modification"})
-            })
-            .catch(error => {
-                res.status(500).json({message: "internal error"})
-                console.log(error)
-            })
+        const {num_trim, trim, Ets} = req.body
+        if(num_trim === 1){
+            await Transport.findOneAndUpdate(
+                {ets: Ets},
+                {trim1: trim},
+                {new: true}
+                )
+                    .then(updated => {
+                        if (updated) res.status(200).json({message: "modification réussie"})
+                        else res.status(400).json({message: "echec de la modification"})
+                    })
+                    .catch(error => {
+                        res.status(500).json({message: "internal error"})
+                        console.log(error)
+                    })
+        }else if(num_trim === 2){
+            await Transport.findOneAndUpdate(
+                {ets: Ets},
+                {trim2: trim},
+                {new: true}
+            )
+                .then(updated => {
+                    if (updated) res.status(200).json({message: "modification réussie"})
+                    else res.status(400).json({message: "echec de la modification"})
+                })
+                .catch(error => {
+                    res.status(500).json({message: "internal error"})
+                    console.log(error)
+                })
+        }else if(num_trim === 3){
+            await Transport.findOneAndUpdate(
+                {ets: Ets},
+                {trim3: trim},
+                {new: true}
+            )
+                .then(updated => {
+                    if (updated) res.status(200).json({message: "modification réussie"})
+                    else res.status(400).json({message: "echec de la modification"})
+                })
+                .catch(error => {
+                    res.status(500).json({message: "internal error"})
+                    console.log(error)
+                })
+        }
     }
 
 
