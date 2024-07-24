@@ -152,9 +152,9 @@ class Update{
     //}
 
     static async UpdatePercent(req, res){
-        const {percent, exam} = req.body
+        const {percent, ID} = req.body
         await Percent.findOneAndUpdate(
-            {exams: exam},
+            {id: ID},
             {pourcentage: percent},
             {new: true}
         )

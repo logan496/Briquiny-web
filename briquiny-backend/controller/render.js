@@ -1,6 +1,7 @@
 const Transport = require("../models/fraisTransport")
 const Scolaire = require("../models/fraisScolaires")
 const Percent = require("../models/pourcentages")
+const DateConcour = require("../models/DateConcour")
 
 class Render{
     static async renderTransportInformations(req, res){
@@ -20,6 +21,13 @@ class Render{
                 .then(transport => res.status(200).json(transport))
                 .catch(error => res.status(400).json({error}))
         }
+    }
+
+    static async renderDateInfo(req, res){
+        const{Ets} = req.body
+        DateConcour.find({ets: Ets})
+            .then(dateCon => res.status(200).json(dateCon))
+            .catch(error => res.status(400).json(error))
     }
 
     // static async renderScolariteInformation(req, res){
@@ -56,11 +64,16 @@ class Render{
     // }
 
 
-    static async renderSuccessPercent(req, res){
-        Percent.find()
+    static async renderPercent(req, res){
+        const{ID} = req.body
+        console.log(ID)
+        Percent.find({id: ID})
             .then(percent => res.status(200).json(percent))
             .catch(error => res.status(400).json({error}))
     }
+
+
+
 }
 
 module.exports = Render

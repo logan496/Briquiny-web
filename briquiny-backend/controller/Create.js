@@ -1,6 +1,7 @@
 const {AddCycle} = require ("../middleware/addCycle")
 const {AddZone} = require("../middleware/AddZone")
 const {CreateDateConcours} =require("../middleware/CreateDate")
+const  {CreatePercent} = require("../middleware/CreatePercent")
 const Transport = require("../models/fraisTransport")
 class Create{
     static async AddByCylce(req, res){
@@ -26,6 +27,15 @@ class Create{
             .then(() => res.status(200).json({message: 'Nouvelle date de concous ajoutée'}))
             .catch(error => res.status(400).json({error}))
     }
+
+    static async AddPercent(req, res) {
+        const {Exams, Annee, percent } = req.body;
+        const ID = Exams + Annee;
+        await CreatePercent(ID, Exams, Annee, percent)
+            .then(() => res.status(200).json({ message: "Nouveau pourcentage ajouté" }))
+            .catch(error => res.status(400).json({ error }));
+    }
+
 
 }
 

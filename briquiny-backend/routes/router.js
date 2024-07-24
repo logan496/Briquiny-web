@@ -17,28 +17,30 @@ router.post('/admin/user', createUser)
 
 //routes de modifications d'éléments
 router.put('/admin/update/percent', Update.UpdatePercent)
-router.put('/admin/update/year_exams', Update.UpdateYearDate)
 router.put('/admin/update/cycle/price', Update.UpdatePriceTranche)
 router.put('/admin/update/date', Update.UpdateDate)
 router.put('/admin/update/cycle/price_inscription', Update.UpdatePriceInscription)
 router.put('/admin/update/transport/price', Update.UpdateTransportPrice)
 
 
-
 //routes pour créer de nouveaux éléments
 router.post('/admin/create/transport', AddController.AddByZone)
 router.post('/admin/create/cycle', AddController.AddByCylce)
 router.post('/admin/create/date', AddController.AddDate)
+router.post('/admin/create/percent', AddController.AddPercent)
+
 
 //routes pour supprimer des éléments
 router.delete('/admin/delete/zone', DeleteController.DeleteByZones)
 router.delete('/admin/delete/cycle', DeleteController.DeleteByCycle)
-
+router.delete('/admin/delete/date', DeleteController.DeleteDate)
+router.delete('/admin/delete/percent', DeleteController.DeletePercent)
 
 //envoies des éléments au frontend
 router.post('/admin/send/zone', renderInformation.renderTransportInformations)
 router.post('/admin/send/cycle', renderInformation.renderScolariteInformation)
-router.post('/admin/send/percent', renderInformation.renderSuccessPercent)
+router.post('/admin/send/percent', renderInformation.renderPercent)
+router.post('/admin/send/date', renderInformation.renderDateInfo)
 
 
 //gestion du remplaçement des ficheirs dans la BD

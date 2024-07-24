@@ -20,6 +20,5 @@ const fraisTransport = new mongoose.Schema({
     }
 })
 
-const Transport = mongoose.model('Transport',fraisTransport)
-
+const Transport = model('Transport', fraisTransport)
 module.exports = Transport

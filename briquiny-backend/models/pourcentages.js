@@ -1,7 +1,12 @@
 const mongooose = require('mongoose')
 const {model} = require('mongoose')
 
-const Pourcentages = new mongooose.Schema({
+const Pourcentage = new mongooose.Schema({
+    id: {
+        type: String,
+        required: true,
+        unique: true,
+    },
     exams: {
         type: String,
         required: true,
@@ -17,6 +22,6 @@ const Pourcentages = new mongooose.Schema({
     }
 })
 
-const Percent = mongooose.model('Percent', Pourcentages)
+const Percent =  model('Percent', Pourcentage)
 
 module.exports = Percent
