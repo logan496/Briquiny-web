@@ -13,6 +13,6 @@ const DateConcour = new mongoose.Schema({
     }
 })
 
-const Dates = mongoose.model('Dates',DateConcour)
+Dates = model('Dates', DateConcour)
 
 module.exports = Dates

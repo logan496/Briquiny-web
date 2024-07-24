@@ -134,22 +134,22 @@ class Update{
             })
     }
 
-    static async UpdateYearDate(req, res){
-        const {Ets, year} = req.body
-        await DateConcour.findOneAndUpdate(
-            {ets: Ets},
-            {year: year},
-            {new: true}
-        )
-            .then(update => {
-                if (update) res.status(200).json({message: "modification réussie"})
-                else res.status(400).json({message: "échec de la modification"})
-            })
-            .catch(error => {
-                res.status(500).json({message: "internal error"})
-                console.log(error)
-            })
-    }
+    // static async UpdateYearDate(req, res){
+    //     const {Ets, DateCon} = req.body
+    //     await DateConcour.findOneAndUpdate(
+    //         {ets: Ets},
+    //         {date: DateCon},
+    //         {new: true}
+    //     )
+    //         .then(update => {
+    //             if (update) res.status(200).json({message: "modification réussie"})
+    //             else res.status(400).json({message: "échec de la modification"})
+    //         })
+    //         .catch(error => {
+    //             res.status(500).json({message: "internal error"})
+    //             console.log(error)
+    //         })
+    //}
 
     static async UpdatePercent(req, res){
         const {percent, exam} = req.body

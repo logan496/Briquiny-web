@@ -1,5 +1,6 @@
 const {AddCycle} = require ("../middleware/addCycle")
 const {AddZone} = require("../middleware/AddZone")
+const {CreateDateConcours} =require("../middleware/CreateDate")
 const Transport = require("../models/fraisTransport")
 class Create{
     static async AddByCylce(req, res){
@@ -17,6 +18,13 @@ class Create{
         }catch (error){
             res.status(500).json({error})
         }
+    }
+
+    static async AddDate(req, res) {
+        const{DateCon, Ets} =  req.body
+        await CreateDateConcours(Ets, DateCon)
+            .then(() => res.status(200).json({message: 'Nouvelle date de concous ajoutée'}))
+            .catch(error => res.status(400).json({error}))
     }
 
 }
