@@ -13,6 +13,7 @@ $five: #fff;
     width: 100%;
     
     &_div1{
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -22,6 +23,34 @@ $five: #fff;
         height: 70vh;
         width: 100%;
         text-align: center;
+        overflow: hidden;
+
+        & img{
+            width: 100%;
+            // height: 100%;
+        }
+        &_shadow{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        &_div{
+            position: absolute;
+            background-color: white;
+            opacity: 0.8;
+            color: black;
+            width: 100%;
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(100px);
+            z-index: 2;
+        }
     }
 
     &_div2{
@@ -52,6 +81,7 @@ $five: #fff;
                 padding: 10px 15px 10px 15px;
                 border-radius: 10px;
                 transition: box-shadow 0.2s ease-in-out;
+                cursor: pointer;
                 @media screen and (max-width: 800px) {
                     display: flex;
                     justify-content: center;
@@ -60,7 +90,7 @@ $five: #fff;
                     width: 100%;
                     height: 50px;
                 }
-                
+
             }
             &_button:hover{
                 box-shadow: 6px 6px 6px #cccccd;
@@ -70,6 +100,7 @@ $five: #fff;
                 justify-content: space-around;
                 width: 100%;
                 gap: 10%;
+                font-size: 0.8em;
                 @media screen and (max-width: 800px) {
                     flex-direction: column;
                     gap: 40px;
@@ -84,6 +115,7 @@ $five: #fff;
 
                     &--p1{
                         color: $four;
+                        font-weight: bold;
                         font-size: 2em;
                     }
                     &--p2{
@@ -286,12 +318,13 @@ $five: #fff;
         border-radius: 10px;
         width: 200px;
         transition: box-shadow 0.2s ease-in-out;
+        cursor: pointer;
         @media screen and (max-width: 900px) {
             height: 51px;
             width: 70vw;
             margin-bottom: 30px;
         }
-        
+
     }
     &_div1:hover{
         box-shadow: 6px 6px 6px #cccccd;
@@ -321,6 +354,12 @@ $five: #fff;
                 align-items: center;
                 gap: 10px;
                 width: 300px;
+                border-radius: 10px;
+                border: 1px solid rgb(231, 231, 231);
+                // padding: 10px;
+                padding: 20px 10px;
+                transition: all .2s ease-in-out;
+
                 @media screen and (max-width: 900px) {
                     width: 70vw;
                 }
@@ -329,12 +368,15 @@ $five: #fff;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: 100px;
-                    height: 100px;
+                    width: 80px;
+                    height: 80px;
                     border-radius: 50%;
-                    background-color: gray;
-                    
+                    overflow: hidden;
                 }
+            }
+            &_container:hover{
+                transition: all .2s ease-in-out;
+                box-shadow: 8px 8px 8px #ea866d;
             }
         }
     }
@@ -343,6 +385,7 @@ $five: #fff;
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        cursor: pointer;
         @media screen and (max-width: 900px) {
             flex-direction: column-reverse;
             justify-content: center;
@@ -353,7 +396,7 @@ $five: #fff;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            width: 150px;
+            // width: 150px;
             gap: 10px;
             @media screen and (max-width: 900px) {
                 justify-content: center;
@@ -376,15 +419,28 @@ $five: #fff;
             height: 160px;
             border-radius: 20px;
             transition: box-shadow 0.2s ease-in-out;
+            overflow: hidden;
             @media screen and (max-width: 900px) {
                 width: 70vw;
             }
-            
+
+            & img{
+                width:100%;
+                min-height: 100%;
+                border: 1px solid rgb(214, 210, 210);
+                border-radius: 20px;
+            }
+
         }
         &_box:hover{
             box-shadow: 8px 8px 8px #ea866d;
         }
     }
+}
+
+.src_img{
+    width: 100%;
+    height: 120%;
 }
 
 // For the mmobile part of the last part of the site

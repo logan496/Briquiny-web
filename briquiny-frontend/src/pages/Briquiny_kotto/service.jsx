@@ -5,7 +5,7 @@ function Service({src, desc}){
     return(
         <div className="bloc_div2_div1_container">
             <div className="bloc_div2_div1_container_circle">
-                {src ? <img src={src} alt="" />: null}
+                {src ? <img src={src} alt="" className="src_img" />: null}
             </div>
             <p>{desc}</p>
         </div>
