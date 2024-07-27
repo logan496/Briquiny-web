@@ -34,10 +34,10 @@ function Header(){
                 <NavLink to={"/briquiny_logbessou"} className="header_right_link">Briquiny Logbessou</NavLink>
                 <NavLink to={"/college_briquiny"} className="header_right_link">College Briquiny</NavLink>
             </div>
-            <select className="header_language" name="language" id="language">
+            {/* <select className="header_language" name="language" id="language">
                 <option value="french">fr</option>
                 <option value="english">en</option>
-            </select>
+            </select> */}
         </div>
     )
 }
